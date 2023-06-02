@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+    <!-- Link CSS  -->
+    <link rel="stylesheet" href="/Conversor/src/css/index.css">
+    <!-- Link JS  -->
+    <script src="/Conversor/src/js/index.js"></script>
+</head>
+
+<body>
+    <main>
+        <section class="container">
+            <!-- TEMPERATURAS  -->
+            <div class="tipo-tarjeta">
+                <h1>
+                    Conversor de Temperaturas
+                </h1>
+                <br>
+                <p class="cantidad-input">Cantidad<br><input type="number" placeholder="Cantidad" name="cantidad"
+                        maxlength="9" id="cantidad_temp"></p>
+                <p class="de-select">
+                    <!-- SELECTION1  -->
+                    <select class="seleccion" name="seleccion" id="Seleccion1_temp">
+                        <option class="relleno" selected>Selecciona una unidad</option>
+                        <option class="relleno" value="Celsius">Celsius ()</option>
+                        <option class="relleno" value="Fahrenheit">Fahrenheit ()</option>
+                    </select>
+
+                    <!-- SELECTION2  -->
+                    <select class="seleccion" name="seleccion" id="Seleccion2_temp">
+                        <option class="relleno" selected>Selecciona una unidad</option>
+                        <option class="relleno" value="Celsius">Celsius ()</option>
+                        <option class="relleno" value="Fahrenheit">Fahrenheit ()</option>
+                    </select>
+                </p>
+                <p>
+                    <!-- BOTON  -->
+                    <button onclick="temperatura(event)" name="convertir">Convertir</button>
+                </p>
+                <!-- RESULTADO  -->
+                <p id="resultado_temp" class="resultados"></p>
+            </div>
+            <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////  -->
+
+            <!-- LONGITUDES  -->
+            <div class="tipo-tarjeta">
+                <h1>
+                    Conversor de Longitudes
+                </h1>
+                <br>
+                <p class="cantidad-input">Cantidad<br><input type="number" placeholder="Cantidad" name="cantidad"
+                        maxlength="9" id="cantidad_long"></p>
+                <p class="de-select">
+                    <!-- SELECTION1  -->
+                    <select class="seleccion" name="seleccion" id="Seleccion1_long">
+                        <option class="relleno" selected value="motivo">Selecciona una unidad</option>
+                        <option class="relleno" value="Millas">Millas (mi)</option>
+                        <option class="relleno" value="Pies">Pies (ft)</option>
+                        <option class="relleno" value="Pulgadas">Pulgadas (in)</option>
+                        <option class="relleno" value="Metros">Metros (m)</option>
+                    </select>
+
+                    <!-- SELECTION2  -->
+                    <select class="seleccion" name="seleccion" id="Seleccion2_long">
+                        <option class="relleno" selected value="motivo">Selecciona una unidad</option>
+                        <option class="relleno" value="Millas">Millas (mi)</option>
+                        <option class="relleno" value="Pies">Pies (ft)</option>
+                        <option class="relleno" value="Pulgadas">Pulgadas (in)</option>
+                        <option class="relleno" value="Metros">Metros (m)</option>
+                    </select>
+                </p>
+                <p>
+                    <!-- BOTON  -->
+                    <button onclick="longitud(event)" name="convertir">Convertir</button>
+                </p>
+                <!-- RESULTADO  -->
+                <p id="resultado_long" class="resultados"></p>
+            </div>
+            <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////  -->
+
+            <!-- PESO  -->
+            <div class="tipo-tarjeta">
+                <h1>
+                    Conversor de Peso
+                </h1>
+                <br>
+                <p class="cantidad-input">Cantidad<br><input type="number" placeholder="Cantidad" name="cantidad"
+                        maxlength="9" id="cantidad_peso"></p>
+                <p class="de-select">
+                    <!-- SELECTION1  -->
+                    <select class="seleccion" name="seleccion" id="Seleccion1_peso">
+                        <option class="relleno" selected value="motivo">Selecciona una unidad</option>
+                        <option class="relleno" value="Libras">Libra (lb)</option>
+                        <option class="relleno" value="Kilogramos">Kilogramo (kg)</option>
+                        <option class="relleno" value="Onzas">Onza (oz)</option>
+                    </select>
+
+                    <!-- SELECTION2  -->
+                    <select class="seleccion" name="seleccion" id="Seleccion2_peso">
+                        <option class="relleno" selected value="motivo">Selecciona una unidad</option>
+                        <option class="relleno" value="Libras">Libra (lb)</option>
+                        <option class="relleno" value="Kilogramos">Kilogramo (kg)</option>
+                        <option class="relleno" value="Onzas">Onza (oz)</option>
+                    </select>
+                </p>
+                <p>
+                    <!-- BOTON  -->
+                    <button onclick="peso(event)" name="convertir">Convertir</button>
+                </p>
+                <!-- RESULTADO  -->
+                <p id="resultado_peso" class="resultados"></p>
+            </div>
+            <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////  -->
+
+            <!-- VELOCIDADES  -->
+            <div class="tipo-tarjeta">
+                <h1>
+                    Conversor de Velocidad
+                </h1>
+                <br>
+                <p class="cantidad-input">Cantidad<br><input type="number" placeholder="Cantidad" name="cantidad"
+                        maxlength="9" id="cantidad_velo"></p>
+                <p class="de-select">
+                    <!-- SELECTION1  -->
+                    <select class="seleccion" name="seleccion" id="Seleccion1_velo">
+                        <option class="relleno" selected value="motivo">Selecciona una unidad</option>
+                        <option class="relleno" value="km/h">Kilómetros por Hora (kmh)</option>
+                        <option class="relleno" value="mp/h">Millas por Hora (mph)</option>
+                    </select>
+
+                    <!-- SELECTION2  -->
+                    <select class="seleccion" name="seleccion" id="Seleccion2_velo">
+                        <option class="relleno" selected value="motivo">Selecciona una unidad</option>
+                        <option class="relleno" value="km/h">Kilómetros por Hora (kmh)</option>
+                        <option class="relleno" value="mp/h">Millas por Hora (mph)</option>
+                    </select>
+                </p>
+                <p>
+                    <!-- BOTON  -->
+                    <button onclick="velocidad(event)" name="convertir">Convertir</button>
+                </p>
+                <!-- RESULTADO  -->
+                <p id="resultado_velo" class="resultados"></p>
+            </div>
+            <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////  -->
+
+            <!-- ENERGÍA  -->
+            <div class="tipo-tarjeta">
+                <h1>
+                    Conversor de Energía
+                </h1>
+                <br>
+                <p class="cantidad-input">Cantidad<br><input type="number" placeholder="Cantidad" name="cantidad"
+                        maxlength="9" id="cantidad_ener"></p>
+                <p class="de-select">
+                    <!-- SELECTION1  -->
+                    <select class="seleccion" name="seleccion" id="Seleccion1_ener">
+                        <option class="relleno" selected value="motivo">Selecciona una unidad</option>
+                        <option class="relleno" value="Julios">Julio (j)</option>
+                        <option class="relleno" value="Kilocalorias">Kilocalorias (kcal)</option>
+                        <option class="relleno" value="Vatios / hora">Vatios Hora (wh)</option>
+                    </select>
+
+                    <!-- SELECTION2  -->
+                    <select class="seleccion" name="seleccion" id="Seleccion2_ener">
+                        <option class="relleno" selected value="motivo">Selecciona una unidad</option>
+                        <option class="relleno" value="Julios">Julio (j)</option>
+                        <option class="relleno" value="Kilocalorias">Kilocalorias (kcal)</option>
+                        <option class="relleno" value="Vatios / hora">Vatios Hora (wh)</option>
+                    </select>
+                </p>
+                <p>
+                    <!-- BOTON  -->
+                    <button onclick="energia(event)" name="convertir">Convertir</button>
+                </p>
+                <!-- RESULTADO  -->
+                <p id="resultado_ener" class="resultados"></p>
+            </div>
+            <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////  -->
+
+            <!-- VOLÚMENES  -->
+            <div class="tipo-tarjeta">
+                <h1>
+                    Conversor de Volumen
+                </h1>
+                <br>
+                <p class="cantidad-input">Cantidad<br><input type="number" placeholder="Cantidad" name="cantidad"
+                        maxlength="9" id="cantidad_volu"></p>
+                <p class="de-select">
+                    <!-- SELECTION1  -->
+                    <select class="seleccion" name="seleccion" id="Seleccion1_volu">
+                        <option class="relleno" selected value="motivo">Selecciona una unidad</option>
+                        <option class="relleno" value="Litros">Litro (l)</option>
+                        <option class="relleno" value="Onzas Liquidas">Onza Liquida (fl.oz)</option>
+                        <option class="relleno" value="Pies Cúbicos">Pie Cúbico (ft <sup>3</sup>)</option>
+                    </select>
+
+                    <!-- SELECTION2  -->
+                    <select class="seleccion" name="seleccion" id="Seleccion2_volu">
+                        <option class="relleno" selected value="motivo">Selecciona una unidad</option>
+                        <option class="relleno" value="Litros">Litro (l)</option>
+                        <option class="relleno" value="Onzas Liquidas">Onza Liquida (fl.oz)</option>
+                        <option class="relleno" value="Pies Cúbicos">Pie Cúbico (ft <sup>3</sup>)</option>
+                    </select>
+                </p>
+                <p>
+                    <!-- BOTON  -->
+                    <button onclick="volumen(event)" name="convertir">Convertir</button>
+                </p>
+                <!-- RESULTADO  -->
+                <p id="resultado_volu" class="resultados"></p>
+            </div>
+            <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////  -->
+        </section>
+    </main>
+</body>
+</html>
